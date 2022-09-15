@@ -18,7 +18,7 @@ limitations under the License.
 
 -->
 
-# toJSON
+# regexp2json
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
@@ -57,15 +57,15 @@ The [branches.md][branches-url] file summarizes the available branches and displ
 ## Usage
 
 ```javascript
-var toJSON = require( '@stdlib/regexp-to-json' );
+var regexp2json = require( '@stdlib/regexp-to-json' );
 ```
 
-#### toJSON( regexp )
+#### regexp2json( regexp )
 
 Returns a [JSON][json] representation of a [regular expression][mdn-regexp].
 
 ```javascript
-var json = toJSON( /ab+c/ );
+var json = regexp2json( /ab+c/ );
 /* returns
     {
         'type': 'RegExp',
@@ -94,18 +94,18 @@ The returned object has the following properties:
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var toJSON = require( '@stdlib/regexp-to-json' );
+var regexp2json = require( '@stdlib/regexp-to-json' );
 
-var out = toJSON( /ab+c/ );
+var out = regexp2json( /.*/ );
 /* returns
     {
         'type': 'RegExp',
-        'pattern': 'ab+c',
+        'pattern': '.*',
         'flags': ''
     }
 */
 
-out = toJSON( /ab+c/g );
+out = regexp2json( /ab+c/g );
 /* returns
     {
         'type': 'RegExp',
