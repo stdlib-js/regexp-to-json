@@ -41,6 +41,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/regexp-to-json/tags). For example,
+
+```javascript
 import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@v0.0.1-esm/index.mjs';
 ```
 
@@ -83,7 +88,7 @@ The returned object has the following properties:
 <body>
 <script type="module">
 
-import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@v0.0.1-esm/index.mjs';
+import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@esm/index.mjs';
 
 var out = regexp2json( /.*/ );
 /* returns
