@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@deno/mod.js';
+import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@v0.1.0-deno/mod.js';
 ```
 
 #### regexp2json( regexp )
@@ -89,7 +89,7 @@ The returned object has the following properties:
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@deno/mod.js';
+import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@v0.1.0-deno/mod.js';
 
 var out = regexp2json( /.*/ );
 /* returns
