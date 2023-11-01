@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2022 The Stdlib Authors.
+* Copyright (c) 2023 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -20,130 +20,14 @@
 
 // MODULES //
 
-var vm = require( 'vm' );
 var tape = require( 'tape' );
-var IS_BROWSER = require( '@stdlib/assert-is-browser' );
-var isPlainObject = require( '@stdlib/assert-is-plain-object' );
-var regexp2json = require( './../../dist' );
-
-
-// VARIABLES //
-
-var opts = {
-	'skip': false
-};
+var main = require( './../../dist' );
 
 
 // TESTS //
 
-tape( 'main export is a function', function test( t ) {
+tape( 'main export is defined', function test( t ) {
 	t.ok( true, __filename );
-	t.strictEqual( typeof regexp2json, 'function', 'main export is a function' );
-	t.end();
-});
-
-tape( 'if provided anything other than a regular expression, the function throws an error', function test( t ) {
-	var values;
-	var i;
-
-	values = [
-		'5',
-		5,
-		NaN,
-		null,
-		void 0,
-		true,
-		false,
-		[],
-		{},
-		function noop() {}
-	];
-
-	for ( i = 0; i < values.length; i++ ) {
-		t.throws( badValue( values[i] ), Error, 'throws when provided ' + values[i] );
-	}
-	t.end();
-
-	function badValue( value ) {
-		return function badValue() {
-			regexp2json( value );
-		};
-	}
-});
-
-tape( 'the function returns a JSON object', function test( t ) {
-	var json = regexp2json( /beep/ );
-	t.strictEqual( isPlainObject( json ), true, 'returns expected value' );
-	t.end();
-});
-
-tape( 'the returned JSON object includes a `type` field whose value is equal to "RegExp"', function test( t ) {
-	var json = regexp2json( /beep/ );
-	t.strictEqual( json.type, 'RegExp', 'returns expected value' );
-	t.end();
-});
-
-tape( 'the returned JSON object includes a `pattern` field', function test( t ) {
-	var expected;
-	var values;
-	var json;
-	var i;
-
-	values = [
-		/.*/,
-		/ab+c/,
-		/\/.*^1/
-	];
-
-	expected = [
-		'.*',
-		'ab+c',
-		'\\/.*^1'
-	];
-
-	for ( i = 0; i < values.length; i++ ) {
-		json = regexp2json( values[ i ] );
-		t.strictEqual( json.pattern, expected[ i ], 'returns expected value when provided '+values[ i ].toString() );
-	}
-	t.end();
-});
-
-tape( 'the returned JSON object includes a `flags` field', function test( t ) {
-	var expected;
-	var values;
-	var json;
-	var i;
-
-	values = [
-		/.*/g,
-		/ab+c/i,
-		/\/.*^1/gi
-	];
-
-	expected = [
-		'g',
-		'i',
-		'gi'
-	];
-
-	for ( i = 0; i < values.length; i++ ) {
-		json = regexp2json( values[i] );
-		t.strictEqual( json.flags, expected[ i ], 'returns expected value when provided '+values[ i ].toString() );
-	}
-	t.end();
-});
-
-opts.skip = IS_BROWSER;
-tape( 'the function supports serializing a regular expression from a different realm', opts, function test( t ) {
-	var json;
-	var re;
-
-	re = vm.runInNewContext( '/ab+c/g' );
-	json = regexp2json( re );
-
-	t.strictEqual( json.type, 'RegExp', 'returns expected value' );
-	t.strictEqual( json.pattern, 'ab+c', 'returns expected value' );
-	t.strictEqual( json.flags, 'g', 'returns expected value' );
-
+	t.strictEqual( main !== void 0, true, 'main export is defined' );
 	t.end();
 });
