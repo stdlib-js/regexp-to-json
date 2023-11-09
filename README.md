@@ -142,6 +142,12 @@ out = regexp2json( /ab+c/g );
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/regexp-reviver`][@stdlib/regexp/reviver]</span><span class="delimiter">: </span><span class="description">revive a JSON-serialized regular expression.</span>
+
 </section>
 
 <!-- /.related -->
@@ -220,6 +226,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [mdn-regexp]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 
 <!-- <related-links> -->
+
+[@stdlib/regexp/reviver]: https://github.com/stdlib-js/regexp-reviver
 
 <!-- </related-links> -->
 
