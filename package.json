@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/regexp-to-json",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Return a JSON representation of a regular expression.",
   "license": "Apache-2.0",
   "author": {
@@ -38,8 +38,8 @@
   },
   "dependencies": {
     "@stdlib/assert-is-regexp": "^0.2.1",
-    "@stdlib/string-format": "^0.2.1",
-    "@stdlib/error-tools-fmtprodmsg": "^0.2.1"
+    "@stdlib/string-format": "^0.2.2",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
   },
   "devDependencies": {
     "@stdlib/assert-is-browser": "^0.2.1",
