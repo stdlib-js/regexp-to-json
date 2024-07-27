@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@esm/index.mjs';
+import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@v0.2.2-esm/index.mjs';
 ```
 
 #### regexp2json( regexp )
@@ -94,7 +94,7 @@ The returned object has the following properties:
 <body>
 <script type="module">
 
-import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@esm/index.mjs';
+import regexp2json from 'https://cdn.jsdelivr.net/gh/stdlib-js/regexp-to-json@v0.2.2-esm/index.mjs';
 
 var out = regexp2json( /.*/ );
 /* returns
